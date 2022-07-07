@@ -1,0 +1,483 @@
+:root {
+    /* --primary: #66FCF1; */
+    --primary: cyan;
+}
+
+/* Scrolling Effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------- */
+
+/* General Effect Start */
+header, footer, section {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2, h3, h4, form label {
+    font-family: 'Poppins', sans-serif;
+}
+
+.main_heading {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+
+}
+
+.line_effect {
+    position: relative;
+    font-family: 'Sansita Swashed', cursive;
+    text-transform: lowercase;
+}
+
+.line_effect::before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 4px;
+    background: darkred;
+    display: inline-block;
+    border-radius: 3px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* General Effect End */
+
+
+/* Navbar Start */
+nav {
+    background: rgb(2 11 83);
+}
+
+/*Changing Bootstrap border and box-shadow of Nav-Button(Sidebar Button/Menu-Button)*/
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* ---------- */
+
+
+/* Custom Styling Nav-Button(Sidebar Button/Menu-Button) */
+.bar {
+    width: 25px;
+    height: 2px;
+    background-color: var(--primary);
+    display: block;
+    margin: 8px;
+    transition: all .3s ease;
+}
+
+.bar1 {
+    transform: rotate(-405deg);
+    transform-origin: center;
+}
+
+.bar2 {
+    transform: scale(0);
+}
+
+.bar3 {
+    transform: rotate(405deg);
+    transform-origin: center;
+    margin-top: -1.2rem;
+}
+
+/* ------------- */
+
+/* -----LOGO----- */
+
+.logo {
+    color: var(--primary) !important;
+    font-size: 1.6rem;
+}
+
+/* ------------- */
+
+/* -----SEARCH BOX----- */
+
+.search_box {
+    min-width: 30%;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    border-radius: 3px;
+    justify-content: center;
+}
+
+#search {
+    outline: none;
+    background: transparent;
+    padding: 7px 10px;
+    color: rgba(221, 221, 221, 0.52);
+    width: 100%;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+#search::placeholder {
+    color: var(--primary);
+}
+
+.search_btn {
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    outline: none;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.search_btn:hover {
+    background: transparent;
+    border-left: 1px solid var(--primary);
+    border-right: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+/* ------------- */
+
+.active {
+    color: var(--primary) !important;
+}
+
+.menu_item {
+    margin-right: 20px !important;
+}
+
+.menu_item:last-child {
+    margin-right: 0 !important;
+}
+
+.menu_item_link {
+    position: relative;
+    display: inline-block;
+    padding: 0 !important;
+    transition: all .4s ease;
+}
+
+.menu_item_link::after {
+
+    content: "";
+    width: 0;
+    height: .15rem;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--primary) !important;
+    display: inline-block;
+    border-radius: 3px;
+    transition: all .4s ease;
+
+}
+
+.menu_item_link:hover::after, .active::after {
+    width: 100%;
+}
+
+.menu_item_link:hover {
+    color: var(--primary) !important;
+}
+
+.navbar-nav>li {
+    position: relative;
+}
+
+.course_icon {
+    position: relative;
+    top: -2px;
+    transition: all .3s ease;
+}
+
+.course_item_link:hover .course_icon {
+    transform: rotate(-180deg);
+    top: 4px;
+}
+
+.menu_item:hover .dropdown {
+    transform: scale(1);
+}
+
+.dropdown {
+    width: 300px;
+    position: absolute;
+    top: 27px;
+    padding-left: 0;
+    list-style: none;
+    background-color: #000000c0;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 10;
+    transform-origin: top left;
+    transform: scale(0);
+    transition: all .3s ease;
+}
+
+
+.dropdown_item {
+    margin-right: 0 !important;
+    margin-bottom: 3px;
+}
+
+.dropdown_item_link {
+    padding: 7px !important;
+    display: block;
+    border-radius: 3px;
+    transition: all .5s ease;
+}
+
+.dropdown_item_link:hover, .dropdown_active {
+    color: crimson !important;
+    font-weight: bold;
+    background-color: var(--primary);
+}
+
+/* Navbar End */
+
+
+/* Header Section Start */
+#header {
+    background: linear-gradient(39deg, rgb(27 26 28) 0%, rgb(2 2 3) 0%, rgb(6 18 110) 100%);
+}
+
+#header .btn {
+    background-color: transparent;
+    padding: 10px 50px !important;
+    display: inline-block;
+    box-shadow: none;
+    transition: all .5s ease;
+}
+
+#header .signup_btn:hover {
+    background-color: crimson !important;
+
+}
+
+#header .login_btn:hover {
+    background-color: cyan !important;
+    color: black;
+
+}
+
+.lwspace {
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.header_img {
+    animation: anim;
+    animation-duration: 1.3s;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: relative;
+    object-fit: cover;
+    text-align: center;
+}
+
+@keyframes anim {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: 50px;
+    }
+
+}
+
+/* Header Section End */
+/* About Us Section Start */
+.read_more {
+    color: darkred;
+    transition: all .3s ease;
+}
+
+.read_more:hover {
+    color: crimson;
+}
+
+/* About Us Section End */
+
+/* Our Courses Section Start */
+.course_des {
+    list-style: none;
+
+}
+
+.course_box {
+    min-height: 550px;
+    transition: all .4s ease !important;
+    cursor: pointer;
+}
+
+.course_box:hover {
+    box-shadow: 2px 2px 10px 5px #0000002e;
+}
+
+.custom_btn {
+    background: linear-gradient(45deg, var(--primary), black);
+    color: white;
+    border: none;
+    outline: none;
+    transition: all .3s ease;
+}
+
+.custom_btn:hover {
+    background: linear-gradient(45deg, black, var(--primary));
+    color: white !important;
+}
+
+/* Our Courses Section End */
+/* Our Services Section Start */
+.service_box {
+    border-radius: 5px;
+    padding: 20px 10px;
+    transition: all .4s ease;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.service_box:hover {
+    box-shadow: 2px 2px 10px 5px #0000002e;
+}
+
+.hide {
+    position: relative;
+    bottom: -60px;
+    transition: all .5s ease;
+
+}
+
+.service_box:hover .hide {
+    bottom: 0;
+}
+
+/* Our Services Section End */
+
+/* Our Team Section Start */
+.owl-nav {
+    display: none;
+}
+
+.owl-dots {
+    margin-top: 20px;
+}
+
+.team_box {
+    transition: all .4s ease;
+
+}
+
+.team_box:hover {
+    background-color: var(--primary);
+}
+
+
+/* Our Team Section End */
+
+
+
+/* Our Achievement Section Start */
+#our_achievement {
+    background-image: linear-gradient(45deg, #000000e8, var(--primary));
+}
+
+/* Our Achievement Section End */
+
+
+/* Contact Section Start */
+.contact_box {
+    cursor: pointer;
+    transition: all .4s ease !important;
+
+}
+
+.contact_box:hover {
+    background-color: var(--primary);
+}
+
+/* Contact Section End */
+
+
+
+/* Footer Section Start */
+.top_footer {
+    background-color: #000000e8;
+}
+
+.useful_link a, .others a {
+    transition: all .4s ease;
+
+}
+
+.useful_link a:hover, .others a:hover {
+    color: var(--primary) !important;
+}
+
+
+.s_icon {
+    width: 2.3rem;
+    height: 2.3rem;
+    transition: all .5s ease !important;
+
+}
+
+.s_icon:hover {
+    background-color: var(--primary);
+}
+
+.s_icon:hover svg {
+    color: crimson !important;
+}
+
+/* Footer Section End */
+
+
+/* Media Query Start */
+
+@media screen and (max-width: 991px) {
+    .menu_item {
+        margin-right: 0 !important;
+        margin-bottom: 3px;
+    }
+
+    .menu_item_link {
+        padding: 7px !important;
+        display: block;
+        border-radius: 3px;
+        transition: all .5s ease;
+    }
+
+    .menu_item_link:hover, .menu_item_active {
+        color: crimson !important;
+        font-weight: bold;
+        background-color: var(--primary);
+    }
+
+    .menu_item_link::after {
+
+        display: none;
+
+    }
+
+    .dropdown {
+        width: 100%;
+        top: 40px;
+        transform-origin: top;
+    }
+}
+
+/* Media Query End */

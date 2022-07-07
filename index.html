@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+              rel="stylesheet"
+              integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+              crossorigin="anonymous">
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+              integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer"/>
+        <!-- Google Font CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500&family=Ubuntu:wght@300;400;500;700&display=swap"
+              rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap"
+              rel="stylesheet">
+        <!-- Owl Carousel CSS (Slider)-->
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+              integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer"/>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+              integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer"/>
+        <!-- AOS CSS (For Scroll Animation) -->
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+              integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer"/>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <title>Online Educational Institute</title>
+    </head>
+    <body>
+        <!-- Navbar Start  -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow"
+             data-aos="zoom-out">
+            <div class="container">
+                <a class="navbar-brand py-2 logo" href="#">OEI</a>
+                <button class="navbar-toggler pe-0"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        onclick="menu_run()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto text-center">
+                        <li class="nav-item menu_item">
+                            <a class="nav-link menu_item_link menu_item_active active"
+                               aria-current="page"
+                               href="#">Home</a>
+                        </li>
+                        <li class="nav-item menu_item">
+                            <a class="nav-link menu_item_link" href="#about_us">About Us</a>
+                        </li>
+                        <li class="nav-item menu_item">
+                            <a class="nav-link menu_item_link course_item_link" href="#our_courses">
+                                Courses <i class="fa-solid fa-sort-down ms-1 course_icon"></i>
+                            </a>
+                            <!-- Dropdown Menu Start -->
+                            <ul class="text-start dropdown">
+                                <li class="dropdown_item">
+                                    <a class="text-white dropdown_item_link" href="#">Web Development</a>
+                                </li>
+                                <li class="dropdown_item">
+                                    <a class="text-white dropdown_item_link" href="#">App Development</a>
+                                </li>
+                            </ul>
+                            <!-- Dropdown Menu End -->
+                        </li>
+                        <li class="nav-item menu_item ">
+                            <a class="nav-link menu_item_link" href="#our_services">Services</a>
+                        </li>
+                        <li class="nav-item menu_item ">
+                            <a class="nav-link menu_item_link" href="#our_team">Our Team</a>
+                        </li>
+                        <li class="nav-item menu_item ">
+                            <a class="nav-link menu_item_link" href="#contact">Contact Us</a>
+                        </li>
+                    </ul>
+                    <!-- Search Box Start -->
+                    <div class="search_box mx-auto mx-lg-0 py-3 py-lg-0">
+                        <form action="">
+                            <input type="search" name="search" id="search" placeholder="Search Here...">
+                        </form>
+                        <button class="search_btn">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <!-- Search Box End -->
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+        <!-- Header Section Start -->
+        <header id="header" class="min-vh-100">
+            <div class="container" data-aos="zoom-in">
+                <div class="row py-5">
+                    <div class="col-lg-7">
+                        <div class="content text-center text-md-start" style="margin-top: 100px;">
+                            <h1 class="text-danger display-5">
+                                <span class="text-info">O</span>nline <span class="text-info">E</span>ducational <span class="text-info">I</span>nstitute
+                        </h1>
+                        <p class="lead text-white lwspace">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, animi facilis minima odio nemo dicta perspiciatis aperiam molestiae nam illo!...
+                        </p>
+                        <a href="" class="btn signup_btn btn-outline-danger mx-2  mt-3">Sign Up</a>
+                        <a href="" class="btn login_btn btn-outline-primary mx-2 mt-3">Login</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 pt-5">
+                    <div class="card bg-transparent border-0 align-items-center">
+                        <div class="card-body w-75">
+                            <img src="images/header1.png" alt="" class="img-fluid header_img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header Section End -->
+        <!-- About Section Start -->
+        <section id="about_us" class="py-5">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col text-center mb-2">
+                        <h2 class="main_heading">About Us</h2>
+                        <p class="line_effect">
+                            It's a Learning Institute
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 mb-4">
+                        <div data-aos="fade-right">
+                            <img src="images/about_us.jpg"
+                                 class="img-fluid img-thumbnail shadow"
+                                 alt=""
+                                 style="cursor: pointer;">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div data-aos="fade-left">
+                            <h3>What is Lorem Ipsum?</h3>
+                            <p class="fs-5 text-black-50 mb-1">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </p>
+                            <a href="#" class="read_more">Read More <i class="fa-solid fa-arrow-right" style="vertical-align: middle;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section End -->
+        <!-- Course Section Start -->
+        <section id="our_courses" class="py-5" style="background: #F3F4F6;">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col text-center mb-2">
+                        <h2 class="main_heading">Our Courses</h2>
+                        <p class="line_effect mb-0">
+                            Lorem ipsum dolor sit amet
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 mb-3">
+                        <div class="card mb-3 course_box" data-aos="fade-right">
+                            <div class="card-header p-0" style="height: 250px;">
+                                <img src="images/c1.jpg" alt="" class="img-fluid rounded w-100 h-100">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="text-center mb-2">Web Development 2022</h3>
+                                <ul class="course_des">
+                                    <li>
+                                        <span><i class="fa-solid fa-check text-success"></i> 350+ Live Classes</span>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-check text-success"></i> 6400+ Quizes</span>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-check text-success"></i> Class Duration: 200+ Hours</span>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-check text-success"></i> Price: <b>10000 <i class="fa-solid fa-indian-rupee-sign"></i></b></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a href="" class="btn shadow custom_btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 mb-3">
+                        <div class="card mb-3 course_box" data-aos="zoom-in">
+                            <div class="card-header p-0" style="height: 250px;">
+                                <img src="images/c3.jpg" alt="" class="img-fluid rounded w-100 h-100">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="text-center mb-2">Digital Marketing 2022</h3>
+                                <ul class="course_des">
+                                    <li>
+                                        <span><i class="fa-solid fa-check text-success"></i> 350+ Live Classes</span>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-check text-success"></i> 6400+ Quizes</span>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-check text-success"></i> 120+ Model Tests</span>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-check text-success"></i> 150+ Lecture Sheet</span>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-check text-success"></i> Class Duration: 200+ Hours</span>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-check text-success"></i> Price: <b>10000 <i class="fa-solid fa-indian-rupee-sign"></i></b></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a href="" class="btn shadow custom_btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 mb-3">
+                        <div class="card mb-3 course_box" data-aos="fade-left">
+                            <div class="card-header p-0" style="height: 250px;">
+                                <img src="images/c2.png" alt="" class="img-fluid rounded w-100 h-100">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="text-center mb-2">App Development 2022</h3>
+                                <ul class="course_des">
+                                    <li>
+                                        <span><i class="fa-solid fa-check text-success"></i> 350+ Live Classes</span>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-check text-success"></i> 6400+ Quizes</span>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-check text-success"></i> 120+ Model Tests</span>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-check text-success"></i> Class Duration: 200+ Hours</span>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa-solid fa-check text-success"></i> Price: <b>15000 <i class="fa-solid fa-indian-rupee-sign"></i></b></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a href="" class="btn shadow custom_btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Course Section End -->
+        <!-- Service Section Start -->
+        <section id="our_services" class="py-5">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col text-center mb-2">
+                        <h2 class="main_heading">
+                            Our Services
+                        </h2>
+                        <p class="line_effect mb-0">
+                            Lorem ipsum dolor sit amet
+                        </p>
+                    </div>
+                </div>
+                <div class="row" data-aos="zoom-in">
+                    <div class="col-xl-4 col-lg-6 mb-3">
+                        <div class="service_box">
+                            <div class="icon text-center display-3 mb-3">
+                                <i class="fa-solid fa-code rounded-circle text-info p-3"></i>
+                            </div>
+                            <div class="info text-center">
+                                <h4>
+                                    Web Development
+                                </h4>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam voluptatibus nostrum illum dolorum animi dicta aspernatur minima ipsum distinctio ipsam?
+                                </p>
+                                <a href="" class="read_more hide">Learn More <i class="fa-solid fa-arrow-right" style="vertical-align: middle;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 mb-3">
+                        <div class="service_box">
+                            <div class="icon text-center display-3 mb-3">
+                                <i class="fa-solid fa-video text-danger p-3"></i>
+                            </div>
+                            <div class="info text-center">
+                                <h4>
+                                    Video Editing
+                                </h4>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam voluptatibus nostrum illum dolorum animi dicta aspernatur minima ipsum distinctio ipsam?
+                                </p>
+                                <a href="" class="read_more hide">Learn More <i class="fa-solid fa-arrow-right" style="vertical-align: middle;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 mb-3">
+                        <div class="service_box">
+                            <div class="icon text-center display-3 mb-3">
+                                <i class="fa-solid fa-laptop-code text-info p-3"></i>
+                            </div>
+                            <div class="info text-center">
+                                <h4>
+                                    Digital Marketing
+                                </h4>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam voluptatibus nostrum illum dolorum animi dicta aspernatur minima ipsum distinctio ipsam?
+                                </p>
+                                <a href="" class="read_more hide">Learn More <i class="fa-solid fa-arrow-right" style="vertical-align: middle;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 mb-3">
+                        <div class="service_box">
+                            <div class="icon text-center display-3 mb-3">
+                                <i class="fa-solid fa-globe text-danger p-3"></i>
+                            </div>
+                            <div class="info text-center">
+                                <h4>
+                                    Software Development
+                                </h4>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam voluptatibus nostrum illum dolorum animi dicta aspernatur minima ipsum distinctio ipsam?
+                                </p>
+                                <a href="" class="read_more hide">Learn More <i class="fa-solid fa-arrow-right" style="vertical-align: middle;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 mb-3">
+                        <div class="service_box">
+                            <div class="icon text-center display-3 mb-3">
+                                <i class="fa-solid fa-arrows-to-dot text-info p-3"></i>
+                            </div>
+                            <div class="info text-center">
+                                <h4>
+                                    App Development
+                                </h4>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam voluptatibus nostrum illum dolorum animi dicta aspernatur minima ipsum distinctio ipsam?
+                                </p>
+                                <a href="" class="read_more hide">Learn More <i class="fa-solid fa-arrow-right" style="vertical-align: middle;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="service_box">
+                            <div class="icon text-center display-3 mb-3">
+                                <i class="fa-solid fa-dice-d20 text-danger p-3"></i>
+                            </div>
+                            <div class="info text-center">
+                                <h4>
+                                    Web Design
+                                </h4>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam voluptatibus nostrum illum dolorum animi dicta aspernatur minima ipsum distinctio ipsam?
+                                </p>
+                                <a href="" class="read_more hide">Learn More <i class="fa-solid fa-arrow-right" style="vertical-align: middle;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Service Section End -->
+        <!-- Team Section Start -->
+        <section id="our_team" class="pb-5">
+            <div class="container">
+                <div class="row mb-2">
+                    <div class="col text-center mb-2">
+                        <h2 class="main_heading">
+                            Our Team Members
+                        </h2>
+                        <p class="line_effect mb-0">
+                            Lorem ipsum dolor sit amet
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item bg-transparent p-2">
+                                <a href="">
+                                    <div class="card shadow team_box">
+                                        <div class="card-body text-center">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="img_box rounded-circle" style="height:150px; width:150px;">
+                                                    <img src="images/p1.jpg"
+                                                         alt=""
+                                                         class="img-fluid rounded-circle w-100 h-100"
+                                                         style="object-fit:cover;">
+                                                </div>
+                                            </div>
+                                            <h4 class="text-dark mt-3">
+                                                Mr. Rahul Khan
+                                            </h4>
+                                            <p class="text-muted">
+                                                Web Developer
+                                            </p>
+                                            <h5 class="text-muted text-uppercase">
+                                                Indian Company Ltd
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item p-2">
+                                <a href="">
+                                    <div class="card shadow team_box">
+                                        <div class="card-body text-center">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="img_box rounded-circle" style="height:150px; width:150px;">
+                                                    <img src="images/p2.jpg"
+                                                         alt=""
+                                                         class="img-fluid rounded-circle w-100 h-100"
+                                                         style="object-fit:cover;">
+                                                </div>
+                                            </div>
+                                            <h4 class="text-dark mt-3">
+                                                Mr. Masum Billah
+                                            </h4>
+                                            <p class="text-muted">
+                                                Web Designer
+                                            </p>
+                                            <h5 class="text-muted text-uppercase">
+                                                Australian Company Ltd
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item p-2">
+                                <a href="">
+                                    <div class="card shadow team_box">
+                                        <div class="card-body text-center">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="img_box rounded-circle" style="height:150px; width:150px;">
+                                                    <img src="images/p5.jpg"
+                                                         alt=""
+                                                         class="img-fluid rounded-circle w-100 h-100"
+                                                         style="object-fit:cover;">
+                                                </div>
+                                            </div>
+                                            <h4 class="text-dark mt-3">
+                                                Mr. Rahul Khan
+                                            </h4>
+                                            <p class="text-muted">
+                                                Web Developer
+                                            </p>
+                                            <h5 class="text-muted text-uppercase">
+                                                Indian Company Ltd
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item p-2">
+                                <a href="">
+                                    <div class="card shadow team_box">
+                                        <div class="card-body text-center">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="img_box rounded-circle" style="height:150px; width:150px;">
+                                                    <img src="images/p4.jpeg"
+                                                         alt=""
+                                                         class="img-fluid rounded-circle w-100 h-100"
+                                                         style="object-fit:cover;">
+                                                </div>
+                                            </div>
+                                            <h4 class="text-dark mt-3">
+                                                Mr. Masum Billah
+                                            </h4>
+                                            <p class="text-muted">
+                                                Web Designer
+                                            </p>
+                                            <h5 class="text-muted text-uppercase">
+                                                Australian Company Ltd
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item p-2">
+                                <a href="">
+                                    <div class="card shadow team_box">
+                                        <div class="card-body text-center">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="img_box rounded-circle" style="height:150px; width:150px;">
+                                                    <img src="images/p5.jpg"
+                                                         alt=""
+                                                         class="img-fluid rounded-circle w-100 h-100"
+                                                         style="object-fit:cover;">
+                                                </div>
+                                            </div>
+                                            <h4 class="text-dark mt-3">
+                                                Salman Khan
+                                            </h4>
+                                            <p class="text-muted">
+                                                Digital Marketer
+                                            </p>
+                                            <h5 class="text-muted text-uppercase">
+                                                Bangladesh Company Ltd
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team Section End -->
+        <!-- Achievement Section Start -->
+        <section id="our_achievement" class="mb-5 py-5 text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-6 pb-3 mb-lg-0">
+                        <div class="text-center shadow-lg rounded p-3">
+                            <div class="icon display-4 mb-3 text-danger">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div class="info">
+                                <h4 class="counter" data-number="43590">
+                                    0+
+                                </h4>
+                                <p>
+                                    Students
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 pb-3  mb-lg-0">
+                        <div class="text-center shadow-lg rounded p-3">
+                            <div class="icon display-4 mb-3 text-danger">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <div class="info">
+                                <h4 class="counter" data-number="2990">
+                                    0+
+                                </h4>
+                                <p>
+                                    Videos
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 pb-3  mb-lg-0">
+                        <div class="text-center shadow-lg rounded p-3">
+                            <div class="icon display-4 mb-3 text-danger">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <div class="info">
+                                <h4 class="counter" data-number="320">
+                                    0+
+                                </h4>
+                                <p>
+                                    Lecture Sheet
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6">
+                        <div class="text-center shadow-lg rounded p-3">
+                            <div class="icon display-4 mb-3 text-danger">
+                                <i class="far fa-envelope"></i>
+                            </div>
+                            <div class="info">
+                                <h4 class="counter" data-number="5490">
+                                    0+
+                                </h4>
+                                <p>
+                                    Online Exams
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Achievement Section End -->
+        <!-- Contact Section Start -->
+        <section id="contact" class="pb-5">
+            <div class="container">
+                <div class="row mb-2">
+                    <div class="col text-center mb-2">
+                        <h2 class="main_heading">
+                            Contact Us
+                        </h2>
+                        <p class="line_effect mb-0">
+                            Lorem ipsum dolor sit amet
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 mb-3">
+                        <div class="text ">
+                            <h4>
+                                Lorem, ipsum dolor.
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quibusdam accusamus, quasi reprehenderit quod culpa?
+                            </p>
+                        </div>
+                        <div class="details"  data-aos="fade-right">
+                            <div class="card shadow-sm mb-3 contact_box">
+                                <div class="card-body d-flex align-items-center">
+                                    <div class="icon fs-3 me-3 text-danger">
+                                        <i class="far fa-envelope"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h5>
+                                            Email
+                                        </h5>
+                                        <a href="mailto:contact@oei.com" class="text-muted">contact@oei.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow-sm mb-3 contact_box">
+                                <div class="card-body d-flex align-items-center">
+                                    <div class="icon fs-3 me-3 text-danger">
+                                        <i class="fa-solid fa-phone-volume"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h5>
+                                            Phone
+                                        </h5>
+                                        <a href="tel:+8801905959585" class="text-muted">+8801905959585</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow-sm mb-3 contact_box">
+                                <div class="card-body d-flex align-items-center">
+                                    <div class="icon fs-3 me-3 text-danger">
+                                        <i class="fa-solid fa-house-chimney"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h5>
+                                            Address
+                                        </h5>
+                                        <address class="text-muted mb-0">Ashulia, Savar, Dhaka</address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 pt-2">
+                        <div class="shadow-sm rounded p-3">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">
+                                        <span><i class="far fa-envelope"></i> Email:</span>
+                                    </label>
+                                    <input type="email"
+                                           class="form-control"
+                                           id="email"
+                                           aria-describedby="emailHelp"
+                                           placeholder="Enter Your Email"
+                                           oninput="email_fun()">
+                                    <div id="emailHelp" class="form-text">
+                                        <span>We'll never share your email with anyone else.</span>
+                                    </div>
+                                    <small class="email_error"></small>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">
+                                        <span><i class="fa-solid fa-book-open"></i> Subject:</span>
+                                    </label>
+                                    <input type="text"
+                                           class="form-control"
+                                           id="subject"
+                                           placeholder="Write Subject">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="msg" class="form-label">
+                                        <span><i class="fa-solid fa-message"></i> Message:</span>
+                                    </label>
+                                    <textarea name="msg"
+                                              id="msg"
+                                              rows="5"
+                                              class="form-control"
+                                              placeholder="Write Your Message..."></textarea>
+                                    <small class="msg_error"></small>
+                                </div>
+                                <div class="text-center"  data-aos="fade-left">
+                                    <input type="submit"
+                                           value="Send"
+                                           id="send_btn"
+                                           class="btn btn-outline-danger shadow">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+        <!-- FAQ Section Start -->
+        <section id="faq" class="pb-5">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col text-center mb-2">
+                        <h2 class="main_heading">
+                            FAQ<span class="text-lowercase">s</span>
+                        </h2>
+                        <p class="line_effect mb-0">
+                            Lorem ipsum dolor sit amet
+                        </p>
+                    </div>
+                </div>
+                <div class="row"  data-aos="fade-up">
+                    <div class="col">
+                        <div class="accordion" id="faq_accordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqOne">
+                                    <button class="accordion-button"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne"
+                                            aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                        What is Lorem ipsum dolor sit amet ?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne"
+                                     class="accordion-collapse collapse show"
+                                     aria-labelledby="faqOne"
+                                     data-bs-parent="#faq_accordion">
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nostrum, incidunt reiciendis praesentium adipisci quas. Voluptates iste consectetur asperiores porro possimus eveniet? Officiis, corrupti molestiae laborum impedit eum dolore officia excepturi, id magnam laudantium alias?
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqTwo">
+                                    <button class="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo"
+                                            aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                        How Lorem, ipsum dolor. ?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo"
+                                     class="accordion-collapse collapse"
+                                     aria-labelledby="faqTwo"
+                                     data-bs-parent="#faq_accordion">
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim officia dolore itaque magnam voluptatem assumenda voluptatum ipsam vitae quam perferendis?
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faqThree">
+                                    <button class="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree"
+                                            aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                        What do Lorem, ipsum dolor sit amet consectetur adipisicing. ?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree"
+                                     class="accordion-collapse collapse"
+                                     aria-labelledby="faqThree"
+                                     data-bs-parent="#faq_accordion">
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, id dolores illo omnis cupiditate deserunt quisquam. Officia odit debitis cumque odio ipsam, aut enim quos saepe, soluta veniam dolores quia voluptatem, ipsa sint asperiores iusto. Officiis, doloribus! Assumenda impedit explicabo magnam rerum rem nostrum aliquid. Placeat ea ducimus quisquam sunt.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section End -->
+        <!-- Footer Section Start -->
+        <footer>
+            <div class="top_footer text-white pt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 mb-4">
+                            <h3 class="text-info">
+                                Online Educational Institute
+                            </h3>
+                            <p class="text-white-50 lwspace">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae labore asperiores exercitationem, omnis corporis molestias amet, beatae vero neque repellat rerum necessitatibus tempora maiores iusto eos odio consequatur odit facilis.
+                            </p>
+                            <div class="social_icons">
+                                <a href="" class="d-inline-block me-2">
+                                    <div class="s_icon rounded-circle d-flex justify-content-center align-items-center border border-info"
+                                         data-aos="fade-right">
+                                        <i class="fa-brands fa-youtube text-info"></i>
+                                    </div>
+                                </a>
+                                <a href="" class="d-inline-block me-2">
+                                    <div class="s_icon rounded-circle d-flex justify-content-center align-items-center border border-info"
+                                         data-aos="fade-right">
+                                        <i class="fa-brands fa-facebook-f text-info"></i>
+                                    </div>
+                                </a>
+                                <a href="" class="d-inline-block me-2">
+                                    <div class="s_icon rounded-circle d-flex justify-content-center align-items-center border border-info"
+                                         data-aos="fade-right">
+                                        <i class="fa-brands fa-linkedin-in text-info"></i>
+                                    </div>
+                                </a>
+                                <a href="" class="d-inline-block me-2">
+                                    <div class="s_icon rounded-circle d-flex justify-content-center align-items-center border border-info"
+                                         data-aos="fade-right">
+                                        <i class="fa-brands fa-twitter text-info"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-3 useful_link">
+                            <h3 class="text-info">
+                                Useful Links
+                            </h3>
+                            <ul style="list-style: none;">
+                                <li>
+                                    <i class="fa-solid fa-chevron-right fs-6 text-danger me-1"></i>
+                                    <a href="" class="text-white-50">About Us</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-chevron-right fs-6 text-danger me-1"></i>
+                                    <a href="" class="text-white-50">Contact Us</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-chevron-right fs-6 text-danger me-1"></i>
+                                    <a href="" class="text-white-50">FAQs</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 others">
+                            <h3 class="text-info">
+                                Others
+                            </h3>
+                            <ul style="list-style: none;">
+                                <li>
+                                    <i class="fa-solid fa-chevron-right fs-6 text-danger me-1"></i>
+                                    <a href="" class="text-white-50">Facebook</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-chevron-right fs-6 text-danger me-1"></i>
+                                    <a href="" class="text-white-50">Youtube</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-chevron-right fs-6 text-danger me-1"></i>
+                                    <a href="" class="text-white-50">Whatsapp</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-chevron-right fs-6 text-danger me-1"></i>
+                                    <a href="" class="text-white-50">Instagram</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_footer bg-dark text-white-50 text-center py-3">
+                <p class="mb-0">
+                    Copyright 1999-2022 by OEI. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+        <!-- JAVASCRIPT LINKS START -->
+        <!-- Jquery JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+        <!-- Bootstrap Bundle with Popper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Font Awesome JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Owl Carousel JS (Slider) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- AOS JS (For Scroll Animation) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            jQuery(document).ready(function($) {
+                $('.owl-carousel').owlCarousel({
+                    loop:true,
+                    margin:10,
+                    nav:true,
+                    autoplay:true,
+                    autoplayTimeout:5000,
+                    autoplayHoverPause:true,
+                    responsive:{
+                            0:{
+                                items:1
+                            },
+                            800:{
+                                items:2
+                            },
+                            1250:{
+                                items:3
+                        }
+                    }
+                });
+
+                AOS.init({
+                    offset: 100,
+                    delay: 0,
+                    duration: 1000
+                });
+               
+            });
+
+        </script>
+        <!-- Custom JS -->
+        <script src="js/script.js"></script>
+        <!-- JAVASCRIPT LINKS END -->
+    </body>
+</html>
